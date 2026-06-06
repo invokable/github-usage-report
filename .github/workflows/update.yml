@@ -1,0 +1,14 @@
+name: update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' #UTC
+
+jobs:
+  composer:
+    uses: kawax/composer-workflow/.github/workflows/update.yml@v1
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+    with:
+      php: latest
