@@ -32,6 +32,6 @@ jobs:
       - name: Run Command
         run: php artisan github:usage
         env:
-          GH_USAE_TOKEN: ${{ secrets.GH_USAE_TOKEN }}
+          GH_USAGE_TOKEN: ${{ secrets.GH_USAGE_TOKEN }}
           GH_USAGE_USER: ${{ secrets.GH_USAGE_USER }}
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
