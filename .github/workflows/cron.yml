@@ -3,7 +3,7 @@ name: cron
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' #UTC
+    - cron: '40 1 * * *' #UTC
 
 jobs:
   cron:
@@ -30,4 +30,8 @@ jobs:
         run: php artisan key:generate
 
       - name: Run Command
-        run: php artisan inspire
+        run: php artisan github:usage
+        env:
+          GH_USAE_TOKEN: ${{ secrets.GH_USAE_TOKEN }}
+          GH_USAGE_USER: ${{ secrets.GH_USAGE_USER }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}

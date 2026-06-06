@@ -36,9 +36,9 @@ return [
     ],
 
     'github' => [
-        'token' => env('GITHUB_USAGE_TOKEN'),
-        'user' => env('GITHUB_USAGE_USER'),
-        'included_credits' => env('GITHUB_USAGE_CREDITS', 7000),
+        'token' => env('GH_USAGE_TOKEN'),
+        'user' => env('GH_USAGE_USER'),
+        'included_credits' => env('GH_USAGE_CREDITS', 7000),
     ],
 
     'discord' => [
