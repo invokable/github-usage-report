@@ -3,7 +3,7 @@ name: cron
 on:
   workflow_dispatch:
   schedule:
-    - cron: '40 0 * * *' #UTC
+    - cron: '40 * * * *' #UTC
 
 jobs:
   cron:
